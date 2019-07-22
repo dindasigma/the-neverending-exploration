@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+
+:root {
+	--c-text: hsl(0,0%,25%);
+	--c-high: hsla(54, 100%, 62%, 0.4);
+    --c-high-light: hsla(54, 100%, 62%, 0.9);
+    --c-pageofcontent-line: hsla(0, 0%, 15%, 0.08);
+    --c-pageofcontent: hsl(0, 0%, 60%);
+	--f-family:'Libre Baskerville', serif;
+	--f-size: 14px;
+	--f-lineheight: 1.5;
+	--f-lily:'Lily Script One', cursive;
+	--f-size-heading: 20px;
+	--f-size-filter:12px;
+	--f-lineheight-filter: 0.2;
+	--l-space-large: 5rem;
+	--l-space-medium: 2rem;
+	--l-space-small: 0.5rem;
+	--l-pageofcontent-bottom:15px;
+	--l-pageofcontent-right:25px;
+	color: var(--c-text);
+	font-family: var(--f-family);
+}
+
+::-moz-selection {
+	background: var(--c-high);
+}
+
+::selection {
+	background: var(--c-high);
+}
+
+body {
+	padding: var(--l-space-large) 0;
+	font-family: inherit;
+}
+
+a {
+	background: -webkit-linear-gradient(left, var(--c-high), var(--c-high-light));
+	background: linear-gradient(to right, var(--c-high), var(--c-high-light));
+	background-size: 300% 40%;
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	-webkit-transition-property: background-position;
+	transition-property: background-position;
+	-webkit-transition-duration: 300ms;
+	transition-duration: 300ms;
+	padding: 0;
+	color: hsl(0,0%,25%);
+}
+
+a:hover {
+	background: -webkit-linear-gradient(left, var(--c-high), var(--c-high-light));
+	background: linear-gradient(to right, var(--c-high), var(--c-high-light));
+	background-size: 300% 100%;
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	padding: 0;
+	color: #000;
+}
+
+.logo {
+	height: 50px;
+	background-image: url('https://media.dindasigma.com/img/neverending.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50px auto; 
+	margin-bottom: var(--l-space-medium);
+}
+
+.content p {
+	line-height: var(--f-lineheight);
+	text-align: center;
+	font-size: var(--f-size);
+	padding-bottom: var(--l-space-medium);
+}
+
+.pageofcontent ul {
+	margin-left: 0;
+}
+
+.pageofcontent ul li {
+	width: 100%;
+	display: block;
+	position: relative;
+	float: left;
+	-webkit-transition: all 0.3s linear, opacity 0.2s linear;
+	transition: all 0.3s linear, opacity 0.2s linear;
+}
+
+.pageofcontent ul li.month {
+	margin-top: var(--l-space-medium);
+	height: 50px;
+	font-family: var(--f-lily);
+	font-size: var(--f-size-heading);
+}
+
+.pageofcontent ul li.article {
+	height: 100%;
+	padding-bottom: 5px;
+}
+
+.pageofcontent ul li.month .title {
+	display: block;
+	float: left;
+	position: relative;
+}
+
+.pageofcontent ul li.month .date {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.pageofcontent ul li.article:before {
+	content: '';
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	background-color: var(--c-pageofcontent-line);
+	top: var(--f-size);
+	left: 0;
+	z-index: 1;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.pageofcontent ul li a:hover {
+	color: var(--c-pageofcontent);
+}
+
+.pageofcontent ul li a .title {
+	display: block;
+	float: left;
+	position: relative;
+	z-index: 4;
+	padding-right: var(--l-space-small);
+}
+
+.pageofcontent ul li a .title:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: white;
+	left: 0;
+	z-index: -1; 
+}
+
+.pageofcontent ul li a .date {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 4;
+	-webkit-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+	padding-left: var(--l-space-small);
+}
+
+.pageofcontent ul li a .date:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: white;
+	top: 0;
+	right: 0;
+	z-index: -1; 
+}
+
+.select {
+	position: fixed;
+	right:0;
+	bottom: 0;
+	text-align: right;
+	font-size: var(--f-size);
+	padding-bottom: var(--l-pageofcontent-bottom);
+	padding-right: var(--l-pageofcontent-right);
+}
+
+.select h4 {
+	font-family: var(--f-family);
+	font-weight: bold;
+	font-size: var(--f-size);
+	padding-bottom: var(--l-space-small);
+	color: var(--c-text);
+}
+
+.select a.button {
+	display: block;
+	background: none;
+	color: var(--c-pageofcontent);
+	padding:0;
+	text-align: right;
+	text-transform: lowercase;
+	line-height: var(--f-lineheight-filter);
+	font-size: var(--f-size-filter);
+}
+
+.select a:hover, .select a.active {
+	color: var(--c-text);
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 40em) {
+  .select {
+    visibility: hidden;
+  }
+}
