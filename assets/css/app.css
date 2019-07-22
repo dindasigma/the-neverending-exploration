@@ -4,9 +4,9 @@
 :root {
 	--c-text: hsl(0,0%,25%);
 	--c-high: hsla(54, 100%, 62%, 0.4);
-    --c-high-light: hsla(54, 100%, 62%, 0.9);
-    --c-pageofcontent-line: hsla(0, 0%, 15%, 0.08);
-    --c-pageofcontent: hsl(0, 0%, 60%);
+	--c-high-light: hsla(54, 100%, 62%, 0.9);
+	--c-pageofcontent-line: hsla(0, 0%, 15%, 0.08);
+	--c-pageofcontent: hsl(0, 0%, 60%);
 	--f-family:'Libre Baskerville', serif;
 	--f-size: 14px;
 	--f-lineheight: 1.5;
@@ -205,6 +205,6 @@ a:hover {
 
 @media only screen and (max-width: 40em) {
   .select {
-    visibility: hidden;
+	visibility: hidden;
   }
 }

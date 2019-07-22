@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__.'/bootstrap.php';
 
 $range_list = 'List!A2:E';
