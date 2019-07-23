@@ -12,9 +12,9 @@ composer install
 
 ## Usage
 
-First, you’ll have to have a Google account and create a new spreadsheet. The file contains two sheets as you can see in this [example file](https://docs.google.com/spreadsheets/d/1N-T3DsgFF_GktcVl6aKn1RryKt6LKpqpgvC9nJpFkFA/edit?usp=sharing).
+First, create a new spreadsheet on your Google account. The file contains two sheets as you can see in this [example file](https://docs.google.com/spreadsheets/d/1N-T3DsgFF_GktcVl6aKn1RryKt6LKpqpgvC9nJpFkFA/edit?usp=sharing).
 
-Now that your Google Sheet is set up, you’ll need to link the spreadsheet to your website by defining some variables in config.php
+Now that our Google Sheet is set up, we need to link the spreadsheet to our application by defining some variables in config.php
 
 ```php
 !defined('ASSETS_URL') && define('ASSETS_URL', 'my_assets_url');
@@ -26,7 +26,7 @@ Now that your Google Sheet is set up, you’ll need to link the spreadsheet to y
 - APPLICATION_NAME is our application name e.g `The Neverending Exploration`
 - CREDENTIAL_URL is our client configuration for Google Sheets API, you can get it by enabling the Google Sheets API from this [URL](https://developers.google.com/sheets/api/quickstart/php). Save the file credentials.json to our root project.
 - SPREEDSHEET_ID is our spreedsheet file ID which created before. For example, consider the following URL that references a Google Sheets spreadsheet:
-_https://docs.google.com/spreadsheets/d/**spreadsheetId**/edit#gid=0_
+`https://docs.google.com/spreadsheets/d/[spreadsheetId]/edit#gid=0`
 
 
 ## Contributing
