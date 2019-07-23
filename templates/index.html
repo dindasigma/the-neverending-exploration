@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>The Neverending Exploration</title>
+  <title>{{ application_name }}</title>
   <meta name="robots" content="index, follow">
   <meta name="description" content="The Neverending Exploration is an index to keep myself learning something new and useful everyday">
   <meta name="keywords" content="dindasigma, dinda sigmawaty, the neverending exploration">
@@ -11,10 +11,10 @@
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Neverending Exploration">
+  <meta property="og:title" content="{{ application_name }}">
   <meta property="og:url" content="https://neverending.dindasigma.com/">
   <meta property="og:description" content="The Neverending Exploration is an index to keep myself learning something new and useful everyday">
-  <meta property="og:site_name" content="The Neverending Exploration">
+  <meta property="og:site_name" content="{{ application_name }}">
   <meta property="og:image" content="{{ assets_url }}/img/logo.jpg">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="101">
@@ -35,10 +35,8 @@
           </div>
           <div class="pageofcontent">
             <ul class="parent">
-
               {% set month = '' %}
               {% set year = '' %}
-
               {% for row in list %}
                 {% set time = row.1 |split(' ') %}
                 {% if month == '' or month != time.1 %}
@@ -52,8 +50,6 @@
                     <div class="date">{{ month }}</div>
                   </li>
                   {% set year = time.2 %}
-                
-                  
                 {% endif %} 
                 <li class="article {{ row.4 }}">
                   <a href="{{ row.3 }}" data-link="{{ row.3 }}" target="_blank">
@@ -62,7 +58,6 @@
                   </a>
                 </li>
               {% endfor %}
-
             </ul>
           </div>
       </div>
@@ -75,14 +70,10 @@
         {% for row in categories %}
           <a class="button" id="{{ row.2 }}">{{ row.1 }}</a>
         {% endfor %}
-        
     </div>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144210783-1"></script>
-
     <script type="text/javascript" src="spreadsheet-api/../assets/js/app.js"></script>
-    
 </body>
 </html>
