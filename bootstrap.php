@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('Asia/Bangkok');
+date_default_timezone_set('Asia/Jakarta');
 
 // Load our autoloader
 require_once __DIR__.'/vendor/autoload.php';
@@ -22,6 +22,9 @@ $loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
 
 // Instantiate our Twig
 $twig = new Twig_Environment($loader);
+
+// add global variabel in meta
+// $twig->addGlobal('text', new Text());
 
 function read($range) {
 	global $service;
