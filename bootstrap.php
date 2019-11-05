@@ -27,12 +27,12 @@ $twig = new Twig_Environment($loader);
 // $twig->addGlobal('text', new Text());
 
 function read($range) {
-	global $service;
-	
-	$response = $service->spreadsheets_values->get(SPREEDSHEET_ID, $range);
-	$values = $response->getValues();
-	if (!empty($values)) {
-		return $values;
-	}
-	return false;
+  global $service;
+  
+  $response = $service->spreadsheets_values->get(SPREEDSHEET_ID, $range);
+  $values = $response->getValues();
+  if (!empty($values)) {
+    return $values;
+  }
+  return false;
 }

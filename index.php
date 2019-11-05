@@ -8,20 +8,20 @@ $range_categories = 'Categories!A2:C';
 $categories = read($range_categories);
 
 $filter = new \Twig\TwigFilter('number_with_suffix', function ($number) {
-    $ends = array('th','st','nd','rd','th','th','th','th','th','th');
-    if ((($number % 100) >= 11) && (($number%100) <= 13))
-        return $number. 'th';
-    else
-        return $number. $ends[$number % 10];
+  $ends = array('th','st','nd','rd','th','th','th','th','th','th');
+  if ((($number % 100) >= 11) && (($number%100) <= 13))
+    return $number. 'th';
+  else
+    return $number. $ends[$number % 10];
 });
 
 $twig->addFilter($filter);
 
 // Render our view
 $params = [
-	'list' => array_reverse($list), 
-	'categories' => $categories,
-    'assets_url' => ASSETS_URL,
-    'application_name' => APPLICATION_NAME
+  'list' => array_reverse($list), 
+  'categories' => $categories,
+  'assets_url' => ASSETS_URL,
+  'application_name' => APPLICATION_NAME
 ];
 echo $twig->render('index.html', $params);
