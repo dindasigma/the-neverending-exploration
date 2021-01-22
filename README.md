@@ -1,6 +1,6 @@
 The Neverending Exploration is an app built by PHP with [Twig Template](https://twig.symfony.com/) and [Google Sheets API](https://developers.google.com/sheets/api/guides/concepts). Google Sheets used as website database.
 
-[View Live Demo](https://neverending.dindasigma.com/)
+[View Live Demo](https://neverending.dinda.id/)
 
 ## Installation
 
@@ -12,7 +12,7 @@ composer install
 
 ## Usage
 
-First, create a new spreadsheet on your Google account. The file contains two sheets as you can see in this [example file](https://docs.google.com/spreadsheets/d/1N-T3DsgFF_GktcVl6aKn1RryKt6LKpqpgvC9nJpFkFA/edit?usp=sharing).
+First, create a new spreadsheet on your Google account. The file contains three sheets as you can see in this [example file](https://docs.google.com/spreadsheets/d/1N-T3DsgFF_GktcVl6aKn1RryKt6LKpqpgvC9nJpFkFA/edit?usp=sharing).
 
 Now that our Google Sheet is set up, we need to link the spreadsheet to our application by defining some variables in config.php
 

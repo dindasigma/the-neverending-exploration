@@ -7,6 +7,18 @@ $list = read($range_list);
 $range_categories = 'Categories!A2:D';
 $categories = read($range_categories);
 
+$title = read('Meta!B1');
+$description = read('Meta!B2');
+$url = read('Meta!B3');
+$about = read('Meta!B4');
+
+$meta = [
+  'title' => $title[0][0],
+  'description' => $description[0][0],
+  'url' => $url[0][0],
+  'about' => $about[0][0]
+];
+
 $filter = new \Twig\TwigFilter('number_with_suffix', function ($number) {
   $ends = array('th','st','nd','rd','th','th','th','th','th','th');
   if ((($number % 100) >= 11) && (($number%100) <= 13))
@@ -21,6 +33,7 @@ $twig->addFilter($filter);
 $params = [
   'list' => array_reverse($list), 
   'categories' => $categories,
+  'meta' => $meta,
   'assets_url' => ASSETS_URL,
   'application_name' => APPLICATION_NAME
 ];

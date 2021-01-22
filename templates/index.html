@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{ application_name }}</title>
+  <title>{{ meta.title }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="robots" content="index, follow">
-  <meta name="description" content="The Neverending Exploration is an index to keep myself learning something new and useful everyday">
-  <meta name="keywords" content="dindasigma, dinda sigmawaty, the neverending exploration">
+  <meta name="description" content="{{ meta.description }}">
   <meta name="author" content="dindasigma">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ application_name }}">
-  <meta property="og:url" content="https://neverending.dindasigma.com/">
-  <meta property="og:description" content="The Neverending Exploration is an index to keep myself learning something new and useful everyday">
+  <meta property="og:url" content="{{ meta.url }}">
+  <meta property="og:description" content="{{ meta.description }}">
   <meta property="og:site_name" content="{{ application_name }}">
   <meta property="og:image" content="{{ assets_url }}/img/logo.jpg">
   <meta property="og:image:type" content="image/png">
@@ -30,14 +29,15 @@
   <link rel="stylesheet" href="{{ assets_url }}/css/app.css">
 </head>
 <body>
+
   <div class="grain"></div>
   <div class="grid-x grid-padding-x">
     <div class="small-12 medium-5 large-5 about-container">
       <div class="about">
           <div class="logo"></div>
-          <h3>the neverending exploration</h3>
+          <h3>{{ meta.title }}</h3>
           <p>
-              ... because web is an interesting world full of amazing people doing amazing things, this is <a href="https://dinda.id" target="_blank" title="dinda">Dinda</a> personal index contains:
+              {{ meta.about|raw }}
           </p>
 
           <div class="select">

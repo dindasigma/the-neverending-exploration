@@ -1,10 +1,8 @@
 
-$((function() {
   $(".select li").on("click", (function() {
     $("html, body").animate({
         scrollTop: $(".links").offset().top - 45
     }, 800),
-    $(".type").removeClass("article-overwrite video-overwrite book-overwrite movie-overwrite podcast-overwrite other-overwrite"),
     $(".links ul li").removeClass("hidden"),
     $(".select li a").removeClass("active"),
     $(".select").addClass("active"),
@@ -19,4 +17,3 @@ $((function() {
   $(".select li.all").on("click", (function() {
       $(".links ul li").removeClass("hidden")
   }))
-}));
