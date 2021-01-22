@@ -4,7 +4,7 @@ require_once __DIR__.'/bootstrap.php';
 $range_list = 'List!A2:E';
 $list = read($range_list);
 
-$range_categories = 'Categories!A2:C';
+$range_categories = 'Categories!A2:D';
 $categories = read($range_categories);
 
 $filter = new \Twig\TwigFilter('number_with_suffix', function ($number) {

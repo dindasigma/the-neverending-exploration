@@ -1,0 +1,4 @@
+vendor/
+credentials.json
+composer.lock
+config.php

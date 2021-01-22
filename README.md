@@ -22,7 +22,7 @@ Now that our Google Sheet is set up, we need to link the spreadsheet to our appl
 !defined('CREDENTIAL_URL') && define('CREDENTIAL_URL', __DIR__ . '/credentials.json');
 !defined('SPREEDSHEET_ID') && define('SPREEDSHEET_ID', 'my_spreadsheed_id');
 ```
-- ASSETS_URL is our baseurl for assets e.g `http://yourdomain.tld/assets`
+- ASSETS_URL is our baseurl for assets e.g `http://localhost/the-neverending-exploration/assets`
 - APPLICATION_NAME is our application name e.g `The Neverending Exploration`
 - CREDENTIAL_URL is our client configuration for Google Sheets API, you can get it by enabling the Google Sheets API from this [URL](https://developers.google.com/sheets/api/quickstart/php). Save the file credentials.json to our root project.
 - SPREEDSHEET_ID is our spreedsheet file ID which created before. For example, consider the following URL that references a Google Sheets spreadsheet:
