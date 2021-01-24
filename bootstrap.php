@@ -18,10 +18,10 @@ $client->setAccessType('offline');
 $service = new Google_Service_Sheets($client);
 
 // Specify our Twig templates location
-$loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
-
-// Instantiate our Twig
-$twig = new Twig_Environment($loader);
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__.'/templates');
+$twig = new \Twig\Environment($loader, [
+    'cache' => __DIR__.'/cache',
+]);
 
 // add global variabel in meta
 // $twig->addGlobal('text', new Text());
